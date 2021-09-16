@@ -13,8 +13,7 @@ export const Container = styled.div`
 export const Body = styled.div`
   display: flex;
   width: 90%;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 50px;
   justify-content: center;
   align-items: center;
   align-self: center;
@@ -23,7 +22,7 @@ export const Body = styled.div`
 export const Breadcrumb = styled.div`
   display: flex;
   flex-direction: row;
-  width: 50px;
+  width: auto;
   padding-left: 100px;
   padding-bottom: 20px;
   padding-top: 20px;

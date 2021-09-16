@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import PhoneIcon from '@material-ui/icons/Phone';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
@@ -10,7 +11,8 @@ import {
   Label
 } from './styles';
 
-const MenuItem = ({ label, icon }) => {
+const MenuItem = ({ label, icon, path }) => {
+  const history = useHistory();
 
   const renderIcon = () => {
     switch (icon) {
@@ -30,7 +32,9 @@ const MenuItem = ({ label, icon }) => {
       <IconContainer>
         {renderIcon()}
       </IconContainer>
-      <Label>{label}</Label>
+      <Label>
+        <h4 onClick={() => history.push(path)}>{label}</h4>
+      </Label>
     </Container>
   );
 };

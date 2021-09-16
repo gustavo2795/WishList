@@ -23,7 +23,7 @@ const Header = () => {
         <LinksContainer>
           <MenuItem label='Cidade: Brasília' icon='location'/>
           <MenuItem label='Central de atendimento' icon='phone'/>
-          <MenuItem label='Lista de desejos' icon='heart'/>
+          <MenuItem label='Lista de desejos' icon='heart' path='/favorites'/>
         </LinksContainer>
         <SearchContainer>
           <Icon>
