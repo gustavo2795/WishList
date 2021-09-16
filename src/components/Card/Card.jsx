@@ -12,20 +12,25 @@ import {
   ProductValue
 } from './styles';
 
-const Card = ({ product }) => {
+const Card = ({ product, setFavoriteProduct }) => {
   const [favorite, setFavorite] = useState(false);
-  console.log(product);
+
+  const handleFavorite = () => {
+    setFavorite(!favorite);
+    setFavoriteProduct(product.id, !favorite);
+  }
+
   return (
     <Container>
       <HeaderCard>
-        <FlagContainer onClick={() => setFavorite(!favorite)}>
+        <FlagContainer onClick={() => handleFavorite()}>
           <FavoriteIcon 
             style={{
               display: 'flex',
-              color: favorite ? 'red' : 'white',
+              color: product.favorite ? 'red' : 'white',
               marginTop: '10px',
               marginLeft: '3px'
-              }}
+            }}
           />
         </FlagContainer>
       </HeaderCard>

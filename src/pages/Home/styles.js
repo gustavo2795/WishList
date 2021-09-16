@@ -13,8 +13,22 @@ export const Container = styled.div`
 export const Body = styled.div`
   display: flex;
   width: 90%;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   justify-content: center;
   align-items: center;
   align-self: center;
+`;
+
+export const Breadcrumb = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 50px;
+  padding-left: 100px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;

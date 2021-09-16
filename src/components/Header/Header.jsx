@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 import MenuItem from '../MenuItem'
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
@@ -15,7 +14,6 @@ import {
 } from './styles';
 
 const Header = () => {
-  const history = useHistory();
   return (
     <HeaderContainer>
       <LogoContainer>

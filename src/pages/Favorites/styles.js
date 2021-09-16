@@ -18,3 +18,16 @@ export const Body = styled.div`
   align-items: center;
   align-self: center;
 `;
+
+export const Breadcrumb = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding-left: 100px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
