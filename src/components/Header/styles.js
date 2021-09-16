@@ -18,6 +18,10 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: flex-start;
   margin-top: -45px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const RightContent = styled.div`

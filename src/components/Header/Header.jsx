@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import MenuItem from '../MenuItem'
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
@@ -14,6 +15,7 @@ import {
 } from './styles';
 
 const Header = () => {
+  const history = useHistory();
   return (
     <HeaderContainer>
       <LogoContainer>
@@ -23,7 +25,7 @@ const Header = () => {
         <LinksContainer>
           <MenuItem label='Cidade: Brasília' icon='location'/>
           <MenuItem label='Central de atendimento' icon='phone'/>
-          <MenuItem label='Lista de desejos' icon='heart'/>
+          <MenuItem label='Lista de desejos' icon='heart' path='/favorites'/>
         </LinksContainer>
         <SearchContainer>
           <Icon>

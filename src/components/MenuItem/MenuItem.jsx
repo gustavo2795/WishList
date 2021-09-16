@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import PhoneIcon from '@material-ui/icons/Phone';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
@@ -10,7 +11,7 @@ import {
   Label
 } from './styles';
 
-const MenuItem = ({ label, icon }) => {
+const MenuItem = ({ label, icon, path }) => {
 
   const renderIcon = () => {
     switch (icon) {
@@ -30,7 +31,13 @@ const MenuItem = ({ label, icon }) => {
       <IconContainer>
         {renderIcon()}
       </IconContainer>
-      <Label>{label}</Label>
+      <Label>
+        <Link 
+          style={{color: '#fff', textDecoration: 'none'}}
+          to={path || ''}>
+          {label}
+        </Link>
+      </Label>
     </Container>
   );
 };
